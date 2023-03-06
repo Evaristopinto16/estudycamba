@@ -1,0 +1,78 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">ESTUDYcamba</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        {{#if user}}
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Pagina Principal</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/biblioteca">oportunidade</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/categorias">Materias</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="/biblioteca">Biblioteca</a>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Criar
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li><a class="dropdown-item" href="/admin/categoria">Materia</a></li>
+            <li><a class="dropdown-item" href="/admin/postagem">Postagem</a></li>
+             
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="/admin/oportunidades">Oportunidades</a></li>
+          </ul>
+        </li> 
+        
+
+        {{else}}
+         
+         <li class="nav-item">
+          
+          <a class="nav-link active" aria-current="page" href="#comecar">Como começar</a>
+        </li>
+         
+        <li class="nav-item">
+          <a class="nav-link" href="#carateristica">Caracteristicas</a>
+        </li>
+         
+        <li class="nav-item">
+          <a class="nav-link" href="#contacto">Contactos</a>
+        </li>
+        
+ 
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/usuario/login">Login</a>
+        </li>
+          {{/if}}
+      </ul>
+      <form class="d-flex" role="search">
+        {{#if user}}
+          
+         <a class="nav-link" href="/usuario/logout"> 
+         
+         <button class="btn alert-danger" type="button">Sair</button>
+          </a>
+         {{else}}
+          <a class="nav-link" href="/usuario/registro"> 
+         <button class="btn btn-outline-success" type="button">Comecar</button>
+         </a>
+         {{/if}}
+        
+     </form>
+       
+    </div>
+  </div>
+</nav>

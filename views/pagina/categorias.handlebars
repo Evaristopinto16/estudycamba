@@ -1,0 +1,23 @@
+<h2>Lista de Materia</h2>
+<hr>
+<a href='/admin/categoria/add'><button class="btn btn-success">Nova Categoria</button></a>
+
+{{#each categoria}}
+    <div class="card">
+        <div class="card-body">
+            <h4>{{nome}}</h4>
+            <small>Slug: {{slug}}</small><br>
+            <small>data de criação {{date}}</small><br>
+            <a href='/admin/categoria/edit/{{_id}}'><button class="btn btn-success">Editar Materia</button></a>
+            
+            <form action="/admin/categoria/rem" method="POST">
+                    <input type="hidden", name="id", value="{{_id}}">
+                    <button type="submit" class="alert alert-danger">Deletar</button>
+            </form>
+           
+        </div>
+ 
+    </div>
+ 
+
+{{/each}}

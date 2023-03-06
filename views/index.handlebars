@@ -1,0 +1,191 @@
+
+<div id="carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"  aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"  aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./public/img/estudantes2.jpg"  class="d-block w-100" alt="imagem" height="400">
+                <div class="carousel-caption d-none d-md-block">
+                     <h1><strong>ESTUDYcamba</strong></h1>
+                     <p class="lead"> Parilhar, Criar, Facilitar isso é a ESTUDYcamba</p>
+                </div>  
+            </div>
+            <div class="carousel-item">
+                <img src="./public/img/Captura.jpeg" class="d-block w-100" alt="imagem" height="400">
+                <div class="carousel-caption d-none d-md-block">
+                     <h1>oportunidade</h1>
+                     <p class="lead">A Empresa Banese está a reclutar novos funcionarios</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./public/img/estudantes.jpg" class="d-block w-100" alt="imagem" height="400">
+                <div class="carousel-caption d-none d-md-block">
+                      <h1><strong>Liga-se ao futuro Com a ESTUDYcamba</strong></h1>
+                     <p class="lead">O </p>
+                </div>
+            </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">next</span>
+            </button>
+            </div>
+
+
+
+<div class="jumbotron mt-4">
+    <div class="container mt-5">
+
+        {{#if user}}
+
+        {{else}}
+        <div class="row justify-content-center">
+            <div class="text-center col-md-4">
+                 <h1 class="display-4">Bem vindo ao ESTUDYcamba</h1>
+                 <p class="lead"><b><i>O jeito mais agradavel de ensinar e aprender online</i></b></p>
+            </div>
+           
+            <p class="text-justify col-md-8">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi ipsam aliquam fuga 
+                at eius nemo aspernatur rerum. Libero, quasi incidunt officia eum, dolore corporis
+                 nemo nobis, sequi perspiciatis perferendis quas?
+                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi ipsam aliquam fuga 
+                at eius nemo aspernatur rerum. Libero, quasi incidunt officia eum, dolore corporis
+                 nemo nobis, sequi perspiciatis perferendis quas?
+                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi ipsam aliquam fuga 
+                at eius nemo aspernatur rerum. Libero, quasi incidunt officia eum, dolore corporis
+                 nemo nobis, sequi perspiciatis perferendis quas?
+            <a href="#">Mais...</a>
+            </p>
+            
+         
+        </div>
+     </div>
+<h1 lang="display-4" align="center"><a class="btn btn-primary btn-lg" href="/usuario/registro" role="button">Comece Agora</a> </h1>
+ 
+     
+    {{/if}}
+    
+
+
+
+
+
+
+
+
+    
+    <hr>
+
+    {{#if user}}
+    
+        <h2>Página de Postagem</h2> 
+            {{#each postagens}}
+                <div class="card mt-4">
+                    <div  class="card-body">
+            
+                        <h3>{{titulo}}</h3>
+                        <p>{{descricao}}</p>
+                        <a href="/postagem/{{slug}}"><button class="btn btn-success">Leia mais</button></a>
+                        <hr>
+                        <small><strong>Materia de:</strong> {{categoria.nome}}</small><br>
+                        <small><strong>Data de publicação:</strong>{{data}}</small>
+                    </div>
+                </div>
+            {{else}}
+                <h4>nenhuma Postagem</h4>
+            {{/each}}
+
+    {{else}}
+
+  
+    
+    
+    
+    <h3  class="text-center display-10 mt-5" id="comecar">Como começar</h3>
+   <div class="col-3 mb-3" style="color: rgb(12, 255, 4);margin: 0 auto;"><hr style="height: 9px; ">  
+            </div>
+    
+    <div class="card mt-3">
+        <div class="card-body">
+            
+        <h5 lang="display-4">Professor</h5>
+        <ol>
+        <li>Inscrever-se</li>
+        <li>Criar disciplina</li>
+        <li>Convidar Alunos</li>
+    </ol>
+    </div></div>
+    <div class="card mt-3"><div class="card-body">
+        <h5 lang="display-4">estudantes</h5>
+        <ol>
+        <li>Inscrever-se</li>
+        <li>Insira o código para participar de uma disciplina</li>
+        
+    </ol>
+    </div></div>
+    <div class="container mt-5">
+        <h4 class="text-center display-10" id="carateristica">ESTUDYcamba é uma solução completa</h4>
+        <div class="col-5 mb-3" style="color: rgb(12, 255, 4);margin: 0 auto;"><hr style="height: 9px; ">  
+            </div>
+        <div class="row justify-content-sm-center">
+            <div class="col-sm-6 col-md-6">
+                <div class="card mb-5" >
+                    <img src="../public/img/img4.jpg" class="card-img-top">
+                <div class="card-body">
+                    
+                    <h6 class="card_title">Crie e organize Materia Escolar</h6>
+                </div>
+                
+
+             
+            </div>
+            </div> <div class="col-sm-6 col-md-6">
+                <div class="card mb-5" >
+                    <img src="../public/img/aluno.webp" class="card-img-top">
+                <div class="card-body">
+                    <h6 class="card_title">encontre os melhores Livros </h6>
+                </div> 
+            </div>
+            </div> <div class="col-sm-6 col-md-6" >
+                <div class="card mb-5" >
+                    <img class="card-img-top" src="../public/img/imag5.jpg">
+                <div class="card-body">
+                    <h6 class="card_title">Crie e reutilize seus materias</h6>
+                </div> 
+            </div>
+             
+            </div> <div class="col-sm-6 col-md-6">
+                <div class="card mb-5" >
+                    <img class="card-img-top" src="../public/img/img1.jpg">
+                <div class="card-body">
+                    <h6 class="card_title">encontre as melhores oportunidades de Emprego, bolsa de Estudo </h6>
+                </div>
+                
+
+                </h4>
+            </div>
+            </div>
+            
+        </div>
+
+    </div>
+    
+      {{/if}}
+    <style>
+        .jumbotron{
+            background-color: aliceblue;
+        }
+    </style>
+</div>
+ 
+ 
